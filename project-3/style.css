@@ -1,19 +1,627 @@
 body {
-    background-color: lime;
+    font-family: 'Xanh Mono', serif;
+    font-size: 30px;
 }
 
-img {
-    width: 200px;
+p {
+    font-family: 'Space Mono',sans-serif;
+}
+
+h1 {
+padding-left: 5%;
+color: white; 
+}
+
+main {
+    width: calc(100% - 90px);
+}
+
+nav {
+    position: absolute;
+    top: 0;
+}
+
+.menu-button {
+    display: block;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    border-style: dashed;
+    z-index: 100;
+    animation-name: rotate;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    cursor: pointer;
+}
+
+@keyframes rotate{
+    from{ transform: rotate(-360deg); }
+    to{ transform: rotate(360deg); }
+}
+
+.menu-button.open {
+    border: solid 2px white;
+}
+
+.menu {
+    position: fixed;
+    height: 100vh;
+    width: 500px;
+    background-color: black;
+    color: white;
+    left: calc(100% - 500px);
+    text-align: center;
+    transform: translateX(500px);
+    transition: all 0.2s ease-in;
+    z-index: 80;
+}
+
+.menu.open {
+    transform: translateX(0);
+}
+
+.menu ul {
+    list-style-type: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu li {
+    padding: 20px 0;
+}
+
+.cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    opacity: 0.5;
+    z-index: -20;
+}
+
+
+#website-title {
+    position: absolute;
+    color: black;
+   left: 23%;
+}
+
+.outer-grid {
+    position: absolute;
+    display: flex;
+   flex-wrap: wrap;
+   padding: 0 4px;
+    left: 25%;
+    top: 15%;
+}
+
+.inner-grid {
+    flex: 25%;
+   max-width: 30%;
+   padding: 0 4px;
+}
+
+.inner-grid img {
+    margin-top: 8px;
+   width: 100%;
+   padding: 10px; 
+}
+
+#camera img {
+    position: relative;
+}
+
+#camera div {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    font-size: 150%;
+    visibility: hidden;
+}
+
+#camera img: hover {
+    cursor: pointer;
+}
+
+#camera:hover div {
+    visibility: visible;
+}
+
+#headphones img {
+    position: relative;
+}
+
+#headphones div {
+    position: absolute;
+    top: 50%;
+    left: 27%;
+    font-size: 150%;
+    visibility: hidden;
+}
+
+#headphones img: hover {
+    cursor: pointer;
+}
+
+#headphones:hover div {
+    visibility: visible;
+}
+
+#controller img: hover {
+    cursor: pointer;
+}
+
+#controller:hover div {
+    visibility: visible;
+}
+
+#controller img {
+    position: relative;
+}
+
+#controller div {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    font-size: 150%;
+    visibility: hidden;
+}
+
+#vinyl img: hover {
+    cursor: pointer;
+}
+
+#vinyl:hover div {
+    visibility: visible;
+}
+
+#vinyl img {
+    position: relative;
+}
+
+#vinyl div {
+    position: absolute;
+    top: 45%;
+    left: 32%;
+    font-size: 150%;
+    visibility: hidden;
+}
+
+
+
+.cover-video video {
+object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.playlist-1 iframe {
+    position: relative;
+    left: 3%;  
+}
+
+.playlist-1 iframe:hover {
+    box-shadow: 0 0 70px chartreuse; 
+}
+
+.history {
+position: relative;
+height: 1000px;   
+}
+
+.scroll-box-1 {
+    position: absolute;
+    max-width: 50%;
     height: 200px;
-    transition: width 2s, height 2s;
+    top: 20%;
+    left: 20%;
+    overflow: auto; 
+    display: inline-block;
+    border: 4px solid black;
+    background-color: greenyellow;
+    font-size: 70%;
+    }
+
+.article {
+    height: 200px;
+    padding-left: 40px;
+}
+.x-icon {
+    max-width:3%;
+    height:auto;
+    padding-top: 5px;
+    padding-left: 10px;      
 }
 
 
-.bigger {
-    height: 400px;
-    width: 400px;
-/*
-    border-radius: 0%;
-    transition: width 2s, height 2s;
-*/
+.history-1 img {
+    position: absolute;
+    max-width: 35%;
+    height: auto;
+    top: 20%;
+    left: 10%; 
+    animation: floating 14s ease-in-out infinite;
+    display: block;
+    filter: blur(10px);
+    z-index: 0;
+}
+
+.history-1 img:hover {
+filter:blur(0px);
+  z-index: 2;
+}
+
+
+
+
+.history-2 img {
+   position: absolute;
+    max-width: 25%;
+    height: auto;
+    top: 10%;
+    left: 70%; 
+    animation: floating 5s ease-in-out infinite;
+    display: block;
+    filter: blur(10px);
+    z-index: 0;
+}
+
+.history-2 img:hover {
+filter:blur(0px);
+  z-index: 2;
+}
+
+.history-3 img {
+   position: absolute;
+    max-width: 30%;
+    height: auto;
+    top: 40%;
+    left: 30%;
+    animation: floating 7s ease-in-out infinite;
+    display: block;
+    filter: blur(10px);
+    z-index: 0;
+}
+
+.history-3 img:hover {
+filter:blur(0px);
+  z-index: 2;
+}
+
+.history-4 img {
+   position: absolute;
+    max-width: 30%;
+    height: auto;
+    top: 60%;
+    left: 50%; 
+    animation: floating 12s ease-in-out infinite;
+    display: block;
+    filter: blur(10px);
+    z-index: 0;
+}
+
+.history-4 img:hover {
+filter:blur(0px);
+  z-index: 2;
+}
+
+.history-5 img {
+   position: absolute;
+    max-width: 30%;
+    height: auto;
+    top: 60%;
+    left: 5%; 
+    animation: floating 10s ease-in-out infinite;
+    display: block;
+    filter: blur(10px);
+    z-index: 0;
+}
+
+.history-5 img:hover {
+filter:blur(0px);
+  z-index: 2;
+}
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    25% { transform: translate(100px,  0px); }
+    50%  { transform: translate(100px, 100px); }
+    75% { transform: translate(0px,  100px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+.present {
+position: relative;
+height: 1000px;
+}
+
+.scroll-box-2 {
+    position: absolute;
+    max-width: 50%;
+    height: 200px;
+    top: 40%;
+    left: 20%;
+    overflow: auto; 
+    display: inline-block;
+    border: 4px solid black;
+    background-color: greenyellow;
+    font-size: 70%;
+    }
+
+
+.article-2 {
+    height: 200px;
+    padding-left: 40px;
+}
+.x-icon-2 {
+    max-width:3%;
+    height:auto;
+    padding-top: 5px;
+    padding-left: 10px;      
+}
+
+
+.present-photo-1 img {
+    position: absolute;
+    max-width: 35%;
+    height: auto;
+    top: 10%;
+    left: 10%; 
+    animation: floating 14s ease-in-out infinite;
+    display: block;
+    filter: blur(10px);
+    z-index: 0;
+}
+
+.present-photo-1 img:hover {
+filter:blur(0px);
+  z-index: 2;
+}
+
+
+
+
+.present-photo-2 img {
+   position: absolute;
+    max-width: 25%;
+    height: auto;
+    top: 10%;
+    left: 70%; 
+    animation: floating 5s ease-in-out infinite;
+    display: block;
+    filter: blur(10px);
+    z-index: 0;
+}
+
+.present-photo-2 img:hover {
+filter:blur(0px);
+  z-index: 2;
+}
+
+.present-photo-3 img {
+   position: absolute;
+    max-width: 30%;
+    height: auto;
+    top: 20%;
+    left: 30%;
+    animation: floating 7s ease-in-out infinite;
+    display: block;
+    filter: blur(10px);
+    z-index: 0;
+}
+
+.present-photo-3 img:hover {
+filter:blur(0px);
+  z-index: 2;
+}
+
+.present-photo-4 img {
+   position: absolute;
+    max-width: 30%;
+    height: auto;
+    top: 50%;
+    left: 50%; 
+    animation: floating 12s ease-in-out infinite;
+    display: block;
+    filter: blur(10px);
+    z-index: 0;
+}
+
+.present-photo-4 img:hover {
+filter:blur(0px);
+  z-index: 2;
+}
+
+.present-photo-5 img {
+   position: absolute;
+    max-width: 30%;
+    height: auto;
+    top: 30%;
+    left: 5%; 
+    animation: floating 10s ease-in-out infinite;
+    display: block;
+    filter: blur(10px);
+    z-index: 0;
+}
+
+.present-photo-5 img:hover {
+filter:blur(0px);
+  z-index: 2;
+}
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    25% { transform: translate(100px,  0px); }
+    50%  { transform: translate(100px, 100px); }
+    75% { transform: translate(0px,  100px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+.problems {
+position: relative;
+height: 1000px;   
+}
+
+.scroll-box-3 {
+    position: absolute;
+    max-width: 50%;
+    height: 200px;
+    top: 5%;
+    left: 20%;
+    overflow: auto; 
+    display: inline-block;
+    border: 4px solid black;
+    background-color: greenyellow;
+    font-size: 70%;
+    }
+
+.article-3 {
+    height: 200px;
+    padding-left: 40px;
+}
+.x-icon-third {
+    max-width:3%;
+    height:auto;
+    padding-top: 5px;
+    padding-left: 10px;      
+}
+
+
+.problems-photo-1 img {
+    position: absolute;
+    max-width: 40%;
+    height: auto;
+    top: 20%;
+    left: 10%; 
+    animation: floating 14s ease-in-out infinite;
+    display: block;
+    filter: blur(10px);
+    z-index: 0;
+}
+
+.problems-photo-1 img:hover {
+filter:blur(0px);
+  z-index: 2;
+}
+
+
+.problems-photo-2 img {
+   position: absolute;
+    max-width: 40%;
+    height: auto;
+    top: 10%;
+    left: 70%; 
+    animation: floating 5s ease-in-out infinite;
+    display: block;
+    filter: blur(10px);
+    z-index: 0;
+}
+
+.problems-photo-2 img:hover {
+filter:blur(0px);
+  z-index: 2;
+}
+
+.problems-photo-3 img {
+   position: absolute;
+    max-width: 40%;
+    height: auto;
+    top: 40%;
+    left: 30%;
+    animation: floating 7s ease-in-out infinite;
+    display: block;
+    filter: blur(10px);
+    z-index: 0;
+}
+
+.problems-photo-3 img:hover {
+filter:blur(0px);
+  z-index: 2;
+}
+
+.problems-photo-4 img {
+   position: absolute;
+    max-width: 40%;
+    height: auto;
+    top: 60%;
+    left: 50%; 
+    animation: floating 12s ease-in-out infinite;
+    display: block;
+    filter: blur(10px);
+    z-index: 0;
+}
+
+.problems-photo-4 img:hover {
+filter:blur(0px);
+  z-index: 2;
+}
+
+.problems-photo-5 img {
+   position: absolute;
+    max-width: 40%;
+    height: auto;
+    top: 60%;
+    left: 5%; 
+    animation: floating 10s ease-in-out infinite;
+    display: block;
+    filter: blur(10px);
+    z-index: 0;
+}
+
+.problems-photo-5 img:hover {
+filter:blur(0px);
+  z-index: 2;
+}
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    25% { transform: translate(100px,  0px); }
+    50%  { transform: translate(100px, 100px); }
+    75% { transform: translate(0px,  100px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+.scroll-box-4 {
+    position: absolute;
+    max-width: 50%;
+    height: 200px;
+    top: 20%;
+    left: 20%;
+    overflow: auto; 
+    display: inline-block;
+    border: 4px solid black;
+    background-color: greenyellow;
+    font-size: 70%;
+    }
+
+
+.article-4 {
+    height: 200px;
+    padding-left: 40px;
+}
+.x-icon-4 {
+    max-width:3%;
+    height:auto;
+    padding-top: 5px;
+    padding-left: 10px;      
+}
+
+.video1 video {
+    position: absolute;
+    border: 20px solid pink;
+    left: 10%;
+    top: 30%;   
 }

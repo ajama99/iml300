@@ -1,16 +1,47 @@
-$(document).ready(function () {  
-    $('.flower').click(function () {
-      $('.sentence').toggle();
+
+
+$(document).ready(function () { 
+    $('.menu-button').click(function () {
+        $(this).toggleClass('open');
+        $('.menu').toggleClass('open');
+        $('.menu-bg').toggleClass('cover');
     });
+}); 
     
-    
-//    $('.computer').click(function () {
-//        $(this).toggleClass("bigger");
-//    });
-//     
-     $('.computer').click(function () {
-//        $('.infopanel').toggle(2000);     
-        $(this).toggleClass("bigger");
-    });
-    
-    });
+
+$(function () {
+        $("#vinyl").draggable();
+    });  
+
+$(function () {
+        $("#camera").draggable();
+    }); 
+
+$(function () {
+        $("#headphones").draggable();
+    }); 
+
+$(function () {
+        $("#controller").draggable();
+    }); 
+
+$(function () {
+        $(".scroll-box-1").draggable();
+    }); 
+
+$(function () {
+        $(".scroll-box-2").draggable();
+    }); 
+
+
+$(function () {
+        $(".scroll-box-3").draggable();
+    }); 
+
+$(function () {
+        $(".scroll-box-4").draggable();
+    }); 
+
+$(function () {
+        $(".video1").draggable();
+    }); 
