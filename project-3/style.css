@@ -91,7 +91,7 @@ nav {
 
 #website-title {
     position: absolute;
-    color: black;
+    color: white;
    left: 23%;
 }
 
@@ -190,7 +190,7 @@ nav {
 
 #vinyl div {
     position: absolute;
-    top: 45%;
+    top: 36%;
     left: 32%;
     font-size: 150%;
     visibility: hidden;
@@ -235,7 +235,7 @@ height: 1000px;
     font-size: 70%;
     }
 
-.article {
+.article-1 {
     height: 200px;
     padding-left: 40px;
 }
@@ -594,34 +594,40 @@ filter:blur(0px);
     100%   { transform: translate(0, -0px); }   
 }
 
+/*
 .scroll-box-4 {
     position: absolute;
-    max-width: 50%;
-    height: 200px;
+    max-width: 70%;
+    height: 600px;
     top: 20%;
-    left: 20%;
+    left: 15%;
     overflow: auto; 
     display: inline-block;
     border: 4px solid black;
-    background-color: greenyellow;
+    background-color: lightpink;
     font-size: 70%;
     }
+*/
 
 
-.article-4 {
-    height: 200px;
-    padding-left: 40px;
+.full-text {
+    height:100%;
+    max-width: 80%;
+    position: relative;
+    left:10%;
+    padding: 20px 20px 20px 20px;
+    background-color: lightpink;
+    font-size: 70%;
 }
-.x-icon-4 {
-    max-width:3%;
-    height:auto;
-    padding-top: 5px;
-    padding-left: 10px;      
+
+.byline {
+   padding-left: 2px; 
 }
 
 .video1 video {
-    position: absolute;
-    border: 20px solid pink;
-    left: 10%;
-    top: 30%;   
+   position: absolute; 
+    max-width: 30%;
+    height: auto;
+    border: 4px solid hotpink;
+    right: 10%;
 }
