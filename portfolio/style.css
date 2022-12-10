@@ -1,0 +1,102 @@
+h1,h2 {
+ font-family: 'Homemade Apple', cursive;   
+}
+
+h1 {
+    text-align: center;
+}
+
+body {
+    position: relative;
+    font-family: 'Crimson Text' , serif;
+    background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+
+.intro {
+  text-align: center;
+}
+
+.cloud-1 {
+    position: relative;
+}
+
+.presentation {
+    position: absolute;
+    top: 30%;
+    left:11%;
+}
+
+.projects-section {
+    position: absolute;
+    left: 42%;
+    top: 30%;
+    display: inline-block;
+    border: 2.5px dashed black;
+    border-radius: 50%;
+}
+
+.cloud-2 {
+    position: relative;
+    left: 30%;
+}
+
+.project-1 {
+    position: absolute;
+    top: 30%;
+    text-align: center;
+    left: -3%;
+}
+
+.cloud-3 {
+    position: relative;
+    left: 30%;
+}
+
+.project-2 {
+    position: absolute;
+    top: 30%;
+    text-align: center;
+    left: 6%;
+}
+
+.cloud-4 {
+    position: relative;
+    left: 30%;
+}
+
+.project-3 {
+    position: absolute;
+    top: 33%;
+    text-align: center;
+    left: 6%;
+}
+
+.cloud-5 {
+    position: absolute;
+    top: 13%;
+    left: 60%;
+    
+}
+
+.exercises {
+    position: absolute;
+    top: 18%;
+    left: 35%;
+}
+
+.thoughts {
+    position: absolute;
+    left: 42%;
+   display: inline-block;
+    border: 2.5px dashed black;
+    border-radius: 50%; 
+}
+
+.responses {
+    position: absolute;
+    bottom: -15%;
+    left: 43.6%;
+    padding-bottom: 40px;
+}
